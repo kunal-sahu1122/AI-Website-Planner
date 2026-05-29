@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Website Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>AI Website Planner <span class="sparkle">✨</span></h1>
+            <p class="subtitle">Enter your industry to generate a tailored website plan instantly.</p>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="userInput" placeholder="e.g. Build a restaurant website..." autocomplete="off">
+            <button id="generateBtn" onclick="generatePlan()">
+                <span>Generate Plan</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                    <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="loader" class="loader-container" style="display: none;">
+            <div class="spinner"></div>
+            <p>Generating your plan...</p>
+        </div>
+
+        <div id="resultContainer" class="result-container" style="display: none;">
+            <div id="resultText" class="result-text"></div>
+            <div id="systemMessage" class="system-message"></div>
+            
+            <div id="confirmButtons" class="action-buttons" style="display: none;">
+                <button class="btn-primary" onclick="confirmPlan('yes')">Yes, Looks Great!</button>
+                <button class="btn-secondary" onclick="confirmPlan('no')">No, Regenerate</button>
+            </div>
+            
+            <div id="codeButton" class="action-buttons" style="display: none;">
+                <button class="btn-accent" onclick="generateCode()">🚀 Generate Code</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
