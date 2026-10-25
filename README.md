@@ -31,5 +31,6 @@ python backend/main.py
 
 ## Author
 
-Rohit Kumar
+Rohit Kumar 
+---
 Kunal Sahu
