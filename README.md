@@ -32,3 +32,4 @@ python backend/main.py
 ## Author
 
 Rohit Kumar
+Kunal Sahu
